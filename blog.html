@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        h1{
+            color: blueviolet;
+        }
+        table, th, td {
+          border:1px solid black;
+          border-collapse: collapse;
+          padding: 10px;
+        }
+        th{
+            background-color: rgb(157, 163, 169);
+        }
+        </style>
+    </head>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+<body>
+   <div>
+    <h1>1.What is difference between map(), filter(), forEach() and find()?</h1>
+    <h3>The map() method creates a new array with the results of calling a function for every array element.
+        It's executes the same code on every element in an array and returns a new array with the updated elements.
+        <ul>
+            <li>loops through each element in array.</li>
+            <li>calls the provided function for each element.</li>
+            <li>creates a new array.</li>
+            <li>doesn’t alter the original array.</li>
+            <li>return a array.</li>
+        </ul>
+    </h3>
+    <h3>
+        The filter() method creates a new array with all the elements that pass the test implemented by the callback() function.
+        <ul>
+            <li>The filter() method creates a new array filled with elements that pass a test provided by a function.</li>
+            <li>The filter() method does not execute the function for empty elements.</li>
+            <li>The filter() method does not change the original array.</li>
+        </ul>
+    </h3>
+    <h3>
+        forEach() is used to execute the same code on every element in an array but does not change the array and it returns undefined.
+        <ul>
+            <li>Just about anything you can do with forEach()</li>
+            <li>forEach() throws away return values and always returns undefined</li>
+            <li>forEach() will allow a callback function to mutate the current array.</li>
+        </ul>
+    </h3>
+    <h3>
+        The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+        <ul>
+            <li>If you need the index of the found element in the array, use findIndex().</li>
+            <li>find() returns the element itself that satisfies the condition.</li>
+            <li>find(), as soon as the element that satisfies the condition is found, it gets returned.</li>
+            <li> find() helps to avoid iterating over the 3rd object in the array.</li>
+        </ul>
+    </h3>
+
+   </div>
+    <div>
+        <h1>2.What is the difference between Local Storage , Session Storage and Cookies?</h1>
+        <table>
+            <tr>
+                <th>Local Storage</th>
+                <th>Session Storage</th>
+                <th>Cookies</th>
+            </tr>
+            <tr>
+                <td>The stored data is not deleted when the browser is closed.</td>
+                <td>The data is stored only for the session and will be deleted when the browser is closed.</td>
+                <td>The data can be set to expire at a certain time.</td>
+            </tr>
+            <tr>
+                <td>Local storage is useful for storing data that the user will need to access later, such as offline data.</td>
+                <td>Session storage is a great way to improve the performance of your web applications.</td>
+                <td>Cookies are a good choice for storing data that should not be persisted for a long time, such as session IDs.</td>
+            </tr>
+            <tr>
+                <td>This is especially useful for storing data that you want to persist even if the user closes the browser, such as preferences or settings.</td>
+                <td>Session storage is useful for storing data that is sensitive, such as login credentials.</td>
+                <td>Cookies are often used to store data that is not sensitive, such as user preferences</td>
+            </tr>
+            <tr>
+                <td>Local Storage is a new feature introduced in HTML5	</td>
+                <td>Session Storage is a new feature introduced in HTML5</td>
+                <td>Cookies are the oldest (HTML4) and most wellknown mechanism.</td>
+            </tr>
+            <tr>
+                <td>The data is not sent with the request from the client to the server.</td>
+                <td>The data is not sent with the request from the client to the server.</td>
+                <td>The data is sent with the request from the client to the server</td>
+            </tr>
+            <tr>
+                <td>The data is stored on the browser and system.</td>
+                <td>The data is stored on the browser only.</td>
+                <td>The data is not sent with the request from the client to the server.</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h1>3.What is event loop?</h1>
+        <h2>The event loop:</h2>
+        <h3>JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.</h3>
+        <h3>
+            <ol>
+            There are two main aspects to consider when the JavaScript Engine reads and executes our code:
+                <li>We need a place to store and write information (variables, functions, etc.)</li>
+                <li>We need to keep track of what’s happening to our code line by line.</li>
+            </ol>
+            <ul>
+                Order of operations:
+                <li>When calling bar, a first frame is created containing references to bar's arguments and local variables.</li>
+                <li>When bar calls foo, a second frame is created and pushed on top of the first one, containing references to foo's arguments and local variables.</li>
+                <li>When foo returns, the top frame element is popped out of the stack (leaving only bar's call frame).</li>
+                <li>When bar returns, the stack is empty.</li>
+            </ul>
+        </h3>
+    </div>
+</script>
+</body>
+</html>
